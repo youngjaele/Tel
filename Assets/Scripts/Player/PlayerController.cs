@@ -5,10 +5,11 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    private float curMovementInput;
+    public float curMovementInput;
 
     private Rigidbody2D _rigidbody;
     private StatsHandler stats;
+    private SpriteRenderer spriteRenderer;
 
     public static PlayerController instance;
 
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour
         instance = this;
         _rigidbody = GetComponent<Rigidbody2D>();
         stats = GetComponent<StatsHandler>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void Start()
@@ -34,6 +36,15 @@ public class PlayerController : MonoBehaviour
         float moveSpeed = curMovementInput * stats.CurrentStats.moveSpeed;
 
         _rigidbody.velocity = new Vector2(moveSpeed, _rigidbody.velocity.y);
+
+        if (curMovementInput < 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if (curMovementInput > 0)
+        {
+            spriteRenderer.flipX = false;
+        }
 
         if (IsGrounded())
         {

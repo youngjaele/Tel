@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,11 +5,13 @@ public class PlayerJump : MonoBehaviour
 {
     private Rigidbody2D _rigidbody;
     private StatsHandler stats;
+    private AnimationController animationController;
 
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
         stats = GetComponent<StatsHandler>();
+        animationController = GetComponent<AnimationController>();
     }
 
     public void OnJumpInput(InputAction.CallbackContext context)
@@ -19,6 +19,7 @@ public class PlayerJump : MonoBehaviour
         if (context.phase == InputActionPhase.Started && PlayerController.instance.IsGrounded())
         {
             _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, stats.CurrentStats.jumpForce);
+            animationController.Jumping();
         }
     }
 
