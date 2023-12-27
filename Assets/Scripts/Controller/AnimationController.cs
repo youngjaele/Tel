@@ -17,7 +17,7 @@ public class AnimationController : _Animation
         Running(moveInput);
     }
 
-    private void Running(Vector2 obj)
+    public void Running(Vector2 obj)
     {
         animator.SetBool(Run, obj.magnitude > 0.5f);   
     }

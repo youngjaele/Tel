@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rigidbody;
     private StatsHandler stats;
     private SpriteRenderer spriteRenderer;
+    private PlayerJump jump;
 
     public static PlayerController instance;
 
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody2D>();
         stats = GetComponent<StatsHandler>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        jump = GetComponentInChildren<PlayerJump>();
     }
 
     private void Start()
@@ -46,7 +48,7 @@ public class PlayerController : MonoBehaviour
             spriteRenderer.flipX = false;
         }
 
-        if (IsGrounded())
+        if (jump.IsGrounded())
         {
             _rigidbody.gravityScale = 1.0f;
         }
@@ -66,17 +68,5 @@ public class PlayerController : MonoBehaviour
         {
             curMovementInput = 0.0f;
         }
-    }
-
-    public bool IsGrounded()
-    {
-        float rayLength = 0.5f;
-        LayerMask groundLayer = LayerMask.GetMask("Ground");
-
-        Vector2 rayStartPosition = new Vector2(transform.position.x, transform.position.y - 1.0f);
-
-        RaycastHit2D hit = Physics2D.Raycast(rayStartPosition, Vector2.down, rayLength, groundLayer);
-
-        return hit.collider != null;
     }
 }
