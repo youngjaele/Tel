@@ -22,3 +22,4 @@ MonoBehaviour:
   isOnKnockback: 0
   knockbackPower: 0
   knockbackTime: 0
+  rangedAttackData: {fileID: 11400000, guid: a674e5954dd069445ba4cfc60842c312, type: 2}

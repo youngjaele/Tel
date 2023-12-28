@@ -20,11 +20,6 @@ public class CharacterController : MonoBehaviour
         jump = GetComponentInChildren<PlayerJump>();
     }
 
-    private void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-    }
-
     private void FixedUpdate()
     {
         Move();

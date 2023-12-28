@@ -31,13 +31,13 @@ public class EnemyMove : EnemyController
         _rigidbody.velocity = new Vector2(nextMove, _rigidbody.velocity.y);
         Vector2 front = new Vector2(transform.position.x + nextMove * 0.5f, transform.position.y);
 
-        RaycastHit2D hit = Physics2D.Raycast(front, Vector2.down, 1, groundLayer);
+        RaycastHit2D hit = Physics2D.Raycast(front, Vector2.down, 2, groundLayer);
 
         if (hit.collider == null)
         {
             Debug.Log("Àýº®");
             nextMove = nextMove * (-1);
-            Invoke("Think", 2f);
+            Invoke("Think", 1f);
         }
     }
     
