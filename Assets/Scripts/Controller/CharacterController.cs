@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class PlayerController : MonoBehaviour
+public class CharacterController : MonoBehaviour
 {
     public float curMovementInput;
 
@@ -12,11 +12,8 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private PlayerJump jump;
 
-    public static PlayerController instance;
-
     private void Awake()
     {
-        instance = this;
         _rigidbody = GetComponent<Rigidbody2D>();
         stats = GetComponent<StatsHandler>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();

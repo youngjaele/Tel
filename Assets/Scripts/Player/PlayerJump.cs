@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -37,7 +38,7 @@ public class PlayerJump : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Vector2 rayStartPosition = new Vector2(transform.position.x, transform.position.y - 1.0f);
+        Vector2 rayStartPosition = new Vector2(transform.position.x, transform.position.y - 0.5f);
 
         Gizmos.DrawRay(rayStartPosition + (Vector2)(transform.right * 0.5f), Vector2.down);
         Gizmos.DrawRay(rayStartPosition + (Vector2)(-transform.right * 0.5f), Vector2.down);
