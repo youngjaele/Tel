@@ -12,6 +12,8 @@ public class CharacterController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private PlayerJump jump;
 
+    private bool isFacingRight = true;
+
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
@@ -33,11 +35,11 @@ public class CharacterController : MonoBehaviour
 
         if (curMovementInput < 0)
         {
-            spriteRenderer.flipX = true;
+            transform.rotation = Quaternion.Euler(0, 180, 0);
         }
         else if (curMovementInput > 0)
         {
-            spriteRenderer.flipX = false;
+            transform.rotation = Quaternion.Euler(0, 0, 0);
         }
 
         if (jump.IsGrounded())
@@ -60,5 +62,10 @@ public class CharacterController : MonoBehaviour
         {
             curMovementInput = 0.0f;
         }
+    }
+
+    public bool IsFacingRight()
+    {
+        return isFacingRight;
     }
 }

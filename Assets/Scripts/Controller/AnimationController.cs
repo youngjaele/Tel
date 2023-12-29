@@ -33,4 +33,9 @@ public class AnimationController : _Animation
         yield return new WaitForSeconds(0.5f);
         animator.SetBool(Jump, false);
     }
+
+    public void Attacking()
+    {
+        animator.SetTrigger("Attack");
+    }
 }
