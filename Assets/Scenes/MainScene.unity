@@ -3787,8 +3787,6 @@ GameObject:
   - component: {fileID: 727745227}
   - component: {fileID: 727745226}
   - component: {fileID: 727745228}
-  - component: {fileID: 727745231}
-  - component: {fileID: 727745230}
   - component: {fileID: 727745229}
   m_Layer: 7
   m_Name: RedSlime
@@ -3887,37 +3885,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.2}
   m_Size: {x: 0.9, y: 0.6}
   m_Direction: 1
---- !u!114 &727745230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 727745224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 699e2167394afd341a885980e032209a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthSystem: {fileID: 0}
-  _rigidbody: {fileID: 0}
---- !u!114 &727745231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 727745224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b89a580d94ca02b49846209fedbef448, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthChangeDelay: 0.5
-  stats: {fileID: 0}
-  _timeSinceLastChange: 3.4028235e+38
-  uiBar: {fileID: 0}
-  <CurrentHp>k__BackingField: 0
 --- !u!1 &797789279
 GameObject:
   m_ObjectHideFlags: 0
@@ -4375,8 +4342,6 @@ GameObject:
   - component: {fileID: 1084220979}
   - component: {fileID: 1084220980}
   - component: {fileID: 1084220983}
-  - component: {fileID: 1084220985}
-  - component: {fileID: 1084220984}
   - component: {fileID: 1084220972}
   - component: {fileID: 1084220977}
   - component: {fileID: 1084220978}
@@ -4675,37 +4640,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackPos: {fileID: 1153686303}
   attackSize: {x: 1.5, y: 2}
---- !u!114 &1084220984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1084220968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 699e2167394afd341a885980e032209a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthSystem: {fileID: 0}
-  _rigidbody: {fileID: 0}
---- !u!114 &1084220985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1084220968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b89a580d94ca02b49846209fedbef448, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthChangeDelay: 0.5
-  stats: {fileID: 0}
-  _timeSinceLastChange: 3.4028235e+38
-  uiBar: {fileID: 0}
-  <CurrentHp>k__BackingField: 0
 --- !u!1 &1153686302
 GameObject:
   m_ObjectHideFlags: 0
@@ -4832,8 +4766,6 @@ GameObject:
   - component: {fileID: 1177117878}
   - component: {fileID: 1177117877}
   - component: {fileID: 1177117875}
-  - component: {fileID: 1177117881}
-  - component: {fileID: 1177117880}
   - component: {fileID: 1177117879}
   m_Layer: 7
   m_Name: BlueSlime
@@ -4932,37 +4864,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.2}
   m_Size: {x: 0.9, y: 0.6}
   m_Direction: 1
---- !u!114 &1177117880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1177117874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 699e2167394afd341a885980e032209a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthSystem: {fileID: 0}
-  _rigidbody: {fileID: 0}
---- !u!114 &1177117881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1177117874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b89a580d94ca02b49846209fedbef448, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthChangeDelay: 0.5
-  stats: {fileID: 0}
-  _timeSinceLastChange: 3.4028235e+38
-  uiBar: {fileID: 0}
-  <CurrentHp>k__BackingField: 0
 --- !u!1 &1177352930
 GameObject:
   m_ObjectHideFlags: 0
@@ -10618,8 +10519,6 @@ GameObject:
   - component: {fileID: 1845019532}
   - component: {fileID: 1845019531}
   - component: {fileID: 1845019529}
-  - component: {fileID: 1845019535}
-  - component: {fileID: 1845019534}
   - component: {fileID: 1845019533}
   m_Layer: 7
   m_Name: GreenSlime
@@ -10718,37 +10617,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.2}
   m_Size: {x: 0.9, y: 0.6}
   m_Direction: 1
---- !u!114 &1845019534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1845019528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 699e2167394afd341a885980e032209a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthSystem: {fileID: 0}
-  _rigidbody: {fileID: 0}
---- !u!114 &1845019535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1845019528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b89a580d94ca02b49846209fedbef448, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthChangeDelay: 0.5
-  stats: {fileID: 0}
-  _timeSinceLastChange: 3.4028235e+38
-  uiBar: {fileID: 0}
-  <CurrentHp>k__BackingField: 0
 --- !u!1 &1845077202
 GameObject:
   m_ObjectHideFlags: 0
